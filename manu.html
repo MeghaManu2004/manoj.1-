@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple List App</title>
+    <link rel="stylesheet" href="liapp.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My List App</h1>
+        <!-- Input field for new items -->
+        <input type="text" id="itemInput" placeholder="Enter a new item" />
+        <button onclick="addItem()">Add Item</button>
+
+        <!-- List to display the items -->
+        <ul id="itemList"></ul>
+    </div>
+
+    <script src="liapp.js">let count = 0;
+
+const counterDisplay = document.getElementById('counter');
+const incrementButton = document.getElementById('increment');
+const decrementButton = document.getElementById('decrement');
+const resetButton = document.getElementById('reset');
+
+incrementButton.addEventListener('click', () => {
+    count++;
+    counterDisplay.textContent = count;
+});
+
+decrementButton.addEventListener('click', () => {
+    count--;
+    counterDisplay.textContent = count;
+});
+
+resetButton.addEventListener('click', () => {
+    count = 0;
+    counterDisplay.textContent = count;
+});
+</script>
+</body>
+</html>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f7f7f7;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 300px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50; color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #f2f2f2;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li button {
+ background-color: #f2f2f2;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li button {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+li button:hover {
+    background-color: #e60000;
+}
+</style>
+
+
+
